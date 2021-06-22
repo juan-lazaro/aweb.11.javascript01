@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var hoy = new Date();
+        var horas = hoy.getHours();
+        var buenDia = "";
+        if (horas < 12) {
+            buenDia = "Buenos días";
+        } else if (horas >= 12 && horas <= 18) {
+            buenDia = "Buenas tardes";
+        } else if (horas >= 18 && horas <= 24) {
+            buenDia = "Buenas noches";
+        }
+
+        alert("¡Hola! Bienvenido." + "\n" +
+            buenDia + ", ingresa los datos solicitados...");
+
+        var nombre = "";
+        var edad = 0;
+        var localidad = "";
+        var profesion = "";
+
+        nombre = prompt("¿Cuál es tu nombre?");
+        edad = prompt("¿Cuál es tu edad?");
+        localidad = prompt("¿Cuál es tu localidad?");
+        profesion = prompt("¿Cuál es tu profesión?");
+
+        var respuesta = confirm("¿Los datos son correctos?" +
+            "\n Nombre: " + nombre +
+            "\n Edad: " + edad +
+            "\n Localidad: " + localidad +
+            "\n Profesión: " + profesion);
+
+        if (confirm) {
+            alert("Dijo: Si.");
+            document.writeln("<h1>Hola Mundo desde JavaScript</h1>");
+            document.writeln("<center>");
+            document.writeln("<table border='5'>");
+            //Renglon 1
+            document.writeln("<tr>");
+            //Columna 1
+            document.writeln("<td rowspan=\"4\" width=\"20%\">");
+            document.writeln("Foto");
+            document.writeln("</td>");
+            //Columna 2
+            document.writeln("<td>");
+            document.writeln("<b>Nombre: </b> "+nombre);
+            document.writeln("</td>");
+            document.writeln("</tr>");
+            //Renglon 2 
+            document.writeln("<tr>");
+            //Columna 1
+            document.writeln("<td>");
+            document.writeln("<b>Edad: </b> "+edad);
+            document.writeln("</td>");
+            document.writeln("</tr>");
+            //Renglon 3
+            document.writeln("<tr>");
+            //Columna 1
+            document.writeln("<td>");
+            document.writeln("<b>Localidad: </b> "+localidad);
+            document.writeln("</td>");
+            document.writeln("</tr>");
+            //Renglon 4
+            document.writeln("<tr>");
+            document.writeln("<td>");
+            //Columna 1
+            document.writeln("<b>Profesión: </b> "+profesion);
+            document.writeln("</td>");
+            document.writeln("</tr>");
+            document.writeln("</table>");
+            document.writeln("</center>");
+
+        } else {
+            alert("Dijo. No.");
+        }
+
+    </script>
+</body>
+
+</html>
